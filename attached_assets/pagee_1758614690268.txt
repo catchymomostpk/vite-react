@@ -1,0 +1,80 @@
+App Name: Chai-Fi (Billing App)
+1. Splash Page / Home Page
+
+Shows only app name (Chai-Fi) and logo.
+
+Color scheme:
+
+Primary Color → Menu card color.
+
+Secondary Color → Attractive complementary color.
+
+Dummy logo image should be placed in assets folder.
+
+2. Login Page
+
+Admin credentials (fixed for now):
+
+Username → Chai-fi
+
+Password → Chai-fi@2025
+
+On successful login → navigate to Menu Page.
+
+3. Menu Page
+
+Displays all menu items (dummy items allowed).
+
+Each menu item has:
+
+Image (dummy image).
+
+Add to Cart option (cart icon in corner).
+
+After selecting items → pressing Cart navigates to Payment Page.
+
+4. Payment Page
+
+Shows total amount (calculated from selected menu items).
+
+Allows manual adjustment of total.
+
+Payment Options (checkboxes for verification):
+
+GPay
+
+Cash
+
+Clicking Paid generates an Invoice.
+
+5. Invoice Page
+
+Simple invoice layout with:
+
+Heading → Chai-Fi
+
+Bill Date, Day, Time
+
+Biller Name → Sriram
+
+Payment Type → Cash or GPay
+
+Total Amount
+
+Includes Share button → Export invoice as PDF.
+
+📂 General Requirements
+
+Provide dummy images for menu items.
+
+Include instruction.txt in final project with:
+
+Steps to run the project.
+
+How to change logo and menu images.
+
+How to customize menu items and prices.
+
+UI should be modern and clean.
+
+Project should be directly runnable in Android Studio.

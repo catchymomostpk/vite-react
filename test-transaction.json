@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "id": "9568d885-37eb-4c9f-ba16-8a22d78510d2",
+      "name": "Masala Chai",
+      "price": "25.00",
+      "quantity": 2
+    }
+  ],
+  "totalAmount": "00.00",
+  "paymentMethod": "cash",
+  "date": "2025-01-02",
+  "dayName": "Thursday",
+  "time": "10:30 AM",
+  "customerName": "Test Customer"
+}

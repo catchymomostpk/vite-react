@@ -1,0 +1,99 @@
+Project: Chaifi Application
+Instructions: Do not alter existing core code or logic. All features must be added as seamless modules, components, or UI additions. Maintain prior data validations and business rules.
+
+1. Menu Page Enhancements
+Add item quantity tracking directly on each menu item card/button.
+
+Display the current count for each item pressed.
+
+Beside each counter, add a “-” button to decrease item quantity (cannot drop below zero).
+
+These quantities reflect in order summary and are used in backend sales calculation.
+
+2. Payment Page
+Introduce new payment method: Cash + GPay.
+
+Allow user to split payment on a bill—for example, if total = ₹100, accept ₹10 via GPay and ₹90 via cash.
+
+Ensure this split payment links correctly to sales and receipts in database.
+
+After the total adjustment field, add customizable input fields labeled extras, cooldrinks, and chocolate (staff can type name and amount; fields are customizable).
+
+Add a “Creditor” button:
+
+When pressed, redirect to a Creditor Page (UI to match existing, consistent design).
+
+On Creditor Page: ask for creditor’s name, paid amount, and balance amount.
+
+E.g., If customer Karthik buys ₹50 item as creditor, this appears on bill and in reports as creditor sale.
+
+Future purchases as creditor (e.g., another ₹10 tomorrow) update their total creditor balance and generate correct bills.
+
+Both “Creditors” and “Cash + GPay” payment splits should be staff-customizable in payment page.
+
+3. Dashboard Page
+Display summary for all creditors—the amount due should tally correctly.
+
+Add a table at the bottom of monthly/daily summary:
+
+Contains each menu item and today’s sales count.
+
+Provide a bar graph visualizing these sales numbers in the summary report.
+
+All summaries should consolidate:
+
+Total sales
+
+Creditors’ balances
+
+Individual menu item sales
+
+Visual (graph) of item-wise sales
+
+Add, in top left header, a “Clear Data” button:
+
+Options to clear records by day, week, or month.
+
+This should reset data in both frontend and MongoDB backend.
+
+4. Login and Admin Page
+After login (username: Inowara, password: Inowara@2025), redirect to admin page.
+
+Admin should be able to:
+
+Insert new menu items
+
+Delete menu items
+
+Update prices
+
+Perform all menu maintenance operations for future use
+
+5. MongoDB Atlas Integration
+Connect to MongoDB Atlas using:
+
+Username: chaifimdu_db_user
+
+Password: chaifimdu_db_user@2025
+
+Connection string:
+mongodb+srv://chaifimdu_db_user:chaifimdu_db_user@2025@chaifi.1dcy7wl.mongodb.net/?retryWrites=true&w=majority&appName=Chaifi
+
+Access List: Allow all IPs (0.0.0.0/0)
+
+All sales, payments (including split and creditors), menu items, and reports must persist to this DB.
+
+6. Automated Daily Summary PDF
+At end of day (window: 3:00 AM to 3:00 PM), generate and email daily sales summary as PDF report to:
+
+Email: chaifimdu@gmail.com
+
+Recipient may be in spam; ensure sending is triggered reliably every day for day’s summary.
+
+Note:
+
+All new fields (extras, cooldrinks, chocolate, creditors, split payments) are staff-customizable and must be supported both in frontend and backend data models.
+
+Bar graph for sales is mandatory in the summary report.
+
+Any additional logic required for reporting, payment splits, clearing data, and custom fields should be added only as new code—do not modify or break existing logic.

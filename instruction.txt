@@ -1,0 +1,122 @@
+# Chai-Fi Billing Web Application - Complete Setup Guide
+
+## 📋 Overview
+Chai-Fi is a modern, production-ready billing web application designed specifically for cafes, tea shops, and small restaurants. It features comprehensive transaction tracking, payment processing, detailed reporting, MongoDB Atlas integration, and cloud deployment capabilities.
+
+## 🚀 Key Features
+
+### Core Functionality
+- **Modern Splash Page**: Beautiful landing page with Chai-Fi branding in black, orange, and white theme
+- **Secure Admin Login**: Authentication system with fixed credentials (Username: Chai-fi, Password: Chai-fi@2025)
+- **Dynamic Menu System**: Categorized menu display with real-time inventory management
+- **Smart Payment Processing**: Support for both GPay and Cash payments with manual total adjustments
+- **Professional Invoicing**: Auto-generated invoices with PDF export functionality
+- **Comprehensive Analytics**: Daily, weekly, and monthly transaction summaries with downloadable reports
+
+### Advanced Features
+- **MongoDB Atlas Integration**: Production-grade database with automatic failover to in-memory storage
+- **Real-time Summaries**: Automatic calculation of GPay vs Cash totals for all time periods
+- **PDF Export System**: Professional reports for daily, weekly, and monthly summaries
+- **Responsive Design**: Mobile-first design that works on all devices
+- **Cloud Deployment Ready**: Configured for Vercel with environment variable management
+
+## 🛠 How to Run the Project
+
+### Prerequisites
+- **Node.js**: Version 18 or higher
+- **Package Manager**: npm or yarn
+- **MongoDB Atlas Account**: (Optional - app works with in-memory storage)
+- **Git**: For version control
+
+### Installation Steps
+
+1. **Clone/Extract Project**
+   ```bash
+   # If from git repository
+   git clone <repository-url>
+   cd chai-fi-billing
+
+   # If from zip file
+   unzip chai-fi-billing.zip
+   cd chai-fi-billing
+   ```
+
+2. **Install Dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Environment Configuration**
+   ```bash
+   # Copy environment template
+   cp .env.example .env
+   
+   # Edit .env file with your settings
+   nano .env  # or use your preferred editor
+   ```
+
+4. **Environment Variables Setup**
+   ```env
+   # MongoDB Atlas (Optional - app works without this)
+   MONGODB_URI=mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/chai-fi?retryWrites=true&w=majority
+   DATABASE_URL=mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/chai-fi?retryWrites=true&w=majority
+
+   # Security
+   SESSION_SECRET=your-super-secure-random-string-here
+
+   # Environment
+   NODE_ENV=development
+   ```
+
+5. **Start Development Server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+6. **Access Application**
+   - Open browser to: `http://localhost:5000`
+   - Login with: Username: `Chai-fi`, Password: `Chai-fi@2025`
+
+## 🗄 MongoDB Atlas Setup Guide
+
+### Step 1: Create MongoDB Atlas Account
+1. Visit [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+2. Click "Try Free" and sign up
+3. Verify your email address
+
+### Step 2: Create Cluster
+1. Choose **"Shared Clusters"** (Free Tier)
+2. Select **Cloud Provider**: AWS (recommended)
+3. Choose **Region**: Closest to your location
+4. Cluster Name: `chai-fi-cluster`
+5. Click **"Create Cluster"** (takes 3-5 minutes)
+
+### Step 3: Database Access
+1. Go to **"Database Access"** in left sidebar
+2. Click **"Add New Database User"**
+3. Username: `chai-fi-admin`
+4. Password: Generate secure password (save it!)
+5. Privileges: **"Read and write to any database"**
+6. Click **"Add User"**
+
+### Step 4: Network Access
+1. Go to **"Network Access"** in left sidebar
+2. Click **"Add IP Address"**
+3. Choose **"Allow Access from Anywhere"** (0.0.0.0/0)
+4. Or add specific IP addresses for better security
+5. Click **"Confirm"**
+
+### Step 5: Get Connection String
+1. Go to **"Clusters"** and click **"Connect"**
+2. Choose **"Connect your application"**
+3. Copy the connection string
+4. Replace `<password>` with your actual password
+5. Add to your `.env` file
+
+### Example Connection String
+```env
+MONGODB_URI=mongodb+srv://chai-fi-admin:YourPassword123@chai-fi-cluster.abc12.mongodb.net/chai-fi?retryWrites=true&w=majority

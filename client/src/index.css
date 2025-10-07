@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0 0% 98%);
+  --foreground: hsl(0 0% 10%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(0 0% 10%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(0 0% 10%);
+  --primary: hsl(15 100% 60%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(0 0% 10%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --muted: hsl(0 0% 96%);
+  --muted-foreground: hsl(0 0% 42%);
+  --accent: hsl(15 85% 55%);
+  --accent-foreground: hsl(0 0% 100%);
+  --destructive: hsl(356.3033 90.5579% 54.3137%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(0 0% 90%);
+  --input: hsl(0 0% 90%);
+  --ring: hsl(15 100% 60%);
+  --chart-1: hsl(15 100% 60%);
+  --chart-2: hsl(159.7826 100% 36.0784%);
+  --chart-3: hsl(42.0290 92.8251% 56.2745%);
+  --chart-4: hsl(147.1429 78.5047% 41.9608%);
+  --chart-5: hsl(341.4894 75.2000% 50.9804%);
+  --sidebar: hsl(0 0% 100%);
+  --sidebar-foreground: hsl(0 0% 10%);
+  --sidebar-primary: hsl(15 100% 60%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(0 0% 96%);
+  --sidebar-accent-foreground: hsl(15 100% 60%);
+  --sidebar-border: hsl(0 0% 90%);
+  --sidebar-ring: hsl(15 100% 60%);
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Menlo, monospace;
+  --radius: 0.5rem;
+  --shadow-2xs: 0px 2px 0px 0px hsl(15 100% 60% / 0.00);
+  --shadow-xs: 0px 2px 0px 0px hsl(15 100% 60% / 0.00);
+  --shadow-sm: 0px 2px 0px 0px hsl(15 100% 60% / 0.00), 0px 1px 2px -1px hsl(15 100% 60% / 0.00);
+  --shadow: 0px 2px 0px 0px hsl(15 100% 60% / 0.00), 0px 1px 2px -1px hsl(15 100% 60% / 0.00);
+  --shadow-md: 0px 2px 0px 0px hsl(15 100% 60% / 0.00), 0px 2px 4px -1px hsl(15 100% 60% / 0.00);
+  --shadow-lg: 0px 2px 0px 0px hsl(15 100% 60% / 0.00), 0px 4px 6px -1px hsl(15 100% 60% / 0.00);
+  --shadow-xl: 0px 2px 0px 0px hsl(15 100% 60% / 0.00), 0px 8px 10px -1px hsl(15 100% 60% / 0.00);
+  --shadow-2xl: 0px 2px 0px 0px hsl(15 100% 60% / 0.00);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+}
+
+.dark {
+  --background: hsl(0 0% 8%);
+  --foreground: hsl(0 0% 95%);
+  --card: hsl(0 0% 12%);
+  --card-foreground: hsl(0 0% 95%);
+  --popover: hsl(0 0% 8%);
+  --popover-foreground: hsl(0 0% 95%);
+  --primary: hsl(15 100% 60%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(0 0% 95%);
+  --secondary-foreground: hsl(0 0% 10%);
+  --muted: hsl(0 0% 15%);
+  --muted-foreground: hsl(0 0% 60%);
+  --accent: hsl(15 85% 55%);
+  --accent-foreground: hsl(0 0% 100%);
+  --destructive: hsl(356.3033 90.5579% 54.3137%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(0 0% 20%);
+  --input: hsl(0 0% 20%);
+  --ring: hsl(15 100% 60%);
+  --chart-1: hsl(15 100% 60%);
+  --chart-2: hsl(159.7826 100% 36.0784%);
+  --chart-3: hsl(42.0290 92.8251% 56.2745%);
+  --chart-4: hsl(147.1429 78.5047% 41.9608%);
+  --chart-5: hsl(341.4894 75.2000% 50.9804%);
+  --sidebar: hsl(0 0% 12%);
+  --sidebar-foreground: hsl(0 0% 95%);
+  --sidebar-primary: hsl(15 100% 60%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(0 0% 15%);
+  --sidebar-accent-foreground: hsl(15 100% 60%);
+  --sidebar-border: hsl(0 0% 20%);
+  --sidebar-ring: hsl(15 100% 60%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+.cart-badge {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+}
+
+.invoice-gradient {
+  background: linear-gradient(135deg, hsl(15 100% 60%), hsl(15 85% 55%));
+}
+
+.splash-gradient {
+  background: linear-gradient(135deg, var(--secondary), var(--primary), var(--accent));
+}
+
+/* Enhanced Calendar Date Picker Styles */
+.rdp-day_selected {
+  background-color: hsl(var(--primary)) !important;
+  color: hsl(var(--primary-foreground)) !important;
+  font-weight: 600 !important;
+  border-radius: 0.375rem !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.rdp-day_selected:hover {
+  background-color: hsl(var(--accent)) !important;
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+}
+
+.rdp-day:hover:not(.rdp-day_selected) {
+  background-color: hsl(var(--muted)) !important;
+  border-radius: 0.375rem !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.rdp-day_today {
+  background-color: hsl(var(--accent) / 0.1) !important;
+  color: hsl(var(--accent)) !important;
+  font-weight: 500 !important;
+  border: 1px solid hsl(var(--accent) / 0.3) !important;
+  border-radius: 0.375rem !important;
+}
+
+.rdp-day_today.rdp-day_selected {
+  background-color: hsl(var(--primary)) !important;
+  color: hsl(var(--primary-foreground)) !important;
+  border: 1px solid hsl(var(--primary)) !important;
+}
+
+/* Calendar popover styling */
+.calendar-popover .rdp {
+  margin: 0;
+}
+
+.calendar-popover .rdp-months {
+  display: flex;
+  justify-content: center;
+}
+
+.calendar-popover .rdp-month {
+  margin: 0;
+}
+
+/* Date picker button styling */
+.date-picker-button {
+  transition: all 0.2s ease-in-out;
+}
+
+.date-picker-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.date-picker-button[data-selected="true"] {
+  background-color: hsl(var(--primary) / 0.1);
+  border-color: hsl(var(--primary));
+  color: hsl(var(--primary));
+}
+
+/* Week Picker Enhancements */
+.rdp-week_number {
+  font-weight: 600 !important;
+  color: hsl(217, 91%, 60%) !important;
+  font-size: 0.75rem !important;
+  padding: 0.25rem !important;
+}
+
+/* Highlight entire week row on hover */
+.rdp-week:hover .rdp-day {
+  background-color: hsl(217, 91%, 95%) !important;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.rdp-week:hover .rdp-week_number {
+  background-color: hsl(217, 91%, 85%) !important;
+  border-radius: 0.375rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Selected week styling */
+.rdp-day.weekSelected {
+  background-color: hsl(217, 91%, 85%) !important;
+  color: hsl(217, 91%, 20%) !important;
+  font-weight: 600 !important;
+}
+
+.rdp-day.weekSelected:hover {
+  background-color: hsl(217, 91%, 75%) !important;
+}
+
+/* Week number column styling */
+.rdp-weeknumber {
+  font-size: 0.75rem !important;
+  color: hsl(217, 91%, 60%) !important;
+  font-weight: 600 !important;
+}
+
+/* Make week selection more obvious */
+.rdp-row:has(.weekSelected) .rdp-weeknumber {
+  background-color: hsl(217, 91%, 70%) !important;
+  color: white !important;
+  border-radius: 0.375rem;
+  padding: 0.25rem;
+}
+
+/* Month Picker Enhancements */
+/* Purple theme for month picker to differentiate from week picker */
+.month-picker-popover .rdp-day_selected {
+  background-color: hsl(270, 70%, 85%) !important;
+  color: hsl(270, 70%, 20%) !important;
+  font-weight: 600 !important;
+}
+
+.month-picker-popover .rdp-day_selected:hover {
+  background-color: hsl(270, 70%, 75%) !important;
+}
+
+.month-picker-popover .rdp-day:hover:not(.rdp-day_selected) {
+  background-color: hsl(270, 70%, 95%) !important;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.month-picker-popover .rdp-day_today {
+  background-color: hsl(270, 70%, 95%) !important;
+  color: hsl(270, 70%, 40%) !important;
+  border: 1px solid hsl(270, 70%, 60%) !important;
+}

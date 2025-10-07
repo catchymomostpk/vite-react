@@ -1,0 +1,78 @@
+Task: Generate a complete runnable Android mobile app in Java (JDK 17) using Gradle 8.0.0. The app is a billing app named Chai-Fi. Provide the full project as a zip containing all source files and an instruction.txt file explaining how to run, customize, and access all features.
+
+Project Requirements:
+
+Splash Page / Home Page:
+
+Shows only the app name Chai-Fi and logo.
+
+Use the menu card color as the primary app color with an attractive complementary color combination.
+
+Include a dummy logo image in the assets.
+
+Login Page:
+
+Admin credentials:
+
+Username: Chai-fi
+
+Password: Chai-fi@2025
+
+After login, navigate to the Menu Page.
+
+Menu Page:
+
+Displays all menu items (dummy items allowed).
+
+Each menu item can be added to a cart (icon in corner).
+
+After selecting items, pressing the cart moves to the Payment Page.
+
+Payment Page:
+
+Shows total amount calculated from selected menu items.
+
+Option to manually adjust total amount.
+
+Payment options:
+
+GPay (checkbox for verification)
+
+Cash (checkbox for verification)
+
+Clicking Paid generates an invoice.
+
+Invoice:
+
+Simple invoice layout with:
+
+Heading: Chai-Fi
+
+Bill Date, Day, Time
+
+Biller Name: Sriram
+
+Payment Type (Cash or GPay)
+
+Total amount
+
+Share button to export invoice as PDF.
+
+General Requirements:
+
+Provide dummy images for menu items.
+
+Provide instruction.txt inside the zip explaining:
+
+How to run the project
+
+How to change the logo and menu images
+
+How to customize menu items and prices
+
+UI should be modern and clean.
+
+Ensure the project is runnable directly in Android Studio.
+
+this is my zip file which contains the whole code of the web app billing web application in this app update
+how much money in g pay in the end of the day and cash at the end of the day to give the download button to download the summary invoice of the day, or month or week for verification and use mongo db atlas as a db for storing all transaction, end of the day transacation as well as the month and week give the instructon how to connect mongo db atlas and give the instruction to deploy the whole web app in vercel make biller name constant if needed to update dynamically at last give the full code as a zip file and instruction for dbnd deploy in vercel
